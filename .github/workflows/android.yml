@@ -8,13 +8,13 @@ on:
 
 jobs:
   reusable-workflow:
-    uses: GMZwinge/hello-world-composite-action/.github/workflows/workflow.yml@v2
+    uses: GMZwinge/hello-world-composite-action/.github/workflows/workflow.yml@v4
 
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: GMZwinge/hello-world-composite-action/.github/actions/action@v4
-    - uses: GMZwinge/hello-world-composite-action/.github/actions/action@v2.0.1
+    - uses: GMZwinge/hello-world-composite-action/.github/actions/action@v4
