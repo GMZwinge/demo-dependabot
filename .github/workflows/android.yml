@@ -16,4 +16,4 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - uses: GMZwinge/hello-world-composite-action/.github/actions/action@v2.0.1
+    - uses: GMZwinge/hello-world-composite-action/.github/actions/action@v1.0.7
