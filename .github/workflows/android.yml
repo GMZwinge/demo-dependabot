@@ -8,7 +8,7 @@ on:
 
 jobs:
   reusable-workflow:
-    uses: GMZwinge/hello-world-composite-action/.github/workflows/workflow.yml@v3
+    uses: GMZwinge/hello-world-composite-action/.github/workflows/workflow.yml@v2
 
   build:
 
@@ -16,5 +16,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: gmzwinge/hello-world-composite-action@v4
-    - uses: gmzwinge/hello-world-composite-action@v2.0.1
+    - uses: gmzwinge/hello-world-composite-action/.github/actions/action@v4
+    - uses: gmzwinge/hello-world-composite-action/.github/actions/action@v2.0.1
