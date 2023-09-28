@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: gmzwinge/hello-world-composite-action@v4
-    - uses: gmzwinge/hello-world-composite-action@v2.0.1
+    - uses: gmzwinge/hello-world-composite-action@v4
