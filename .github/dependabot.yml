@@ -5,11 +5,29 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      github-actions:
+        # Group version updates of actions in a single PR.
+        dependency-type: production
   - package-ecosystem: npm
     directory: "/javascript"
     schedule:
       interval: "weekly"
+    groups:
+      production-dependencies:
+        # Group version updates in "dependencies" section of package.json.
+        dependency-type: production
+      development-dependencies:
+        # Group version updates in "devDependencies" section of package.json.
+        dependency-type: development
   - package-ecosystem: bundler
     directory: "/ruby"
     schedule:
       interval: "weekly"
+    groups:
+      production-dependencies:
+        # Group version updates of runtime dependencies in Gemfile.
+        dependency-type: production
+      development-dependencies:
+        # Group version updates of development dependencies in Gemfile.
+        dependency-type: development
