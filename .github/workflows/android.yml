@@ -33,10 +33,10 @@ jobs:
     # possibly titled something like: Change comment version precision of actions chosen by users.
     # In this case, Dependabot updates both the commit id to 8ade135a41bc03ea155e62e844d188df1ea18608
     # and the version comment to v4.1.0.
-    - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
+    - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 #v4.1.0
     # In this case, Dependabot updates the commit id to 8ade135a41bc03ea155e62e844d188df1ea18608
     # but not the version comment, even though the version in the comment also has that commit id.
-    - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3
+    - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 #v3
     # What if the commit id and version comment don't match. In both cases, it updates the commit id\
     # to 8ade135a41bc03ea155e62e844d188df1ea18608, but it does not update the version comment.
     # This is a problem: if the version tag is moved, the version comment will no longer be updated
@@ -45,8 +45,8 @@ jobs:
     # found:
     # - [Dependabot doesn't always update version comments for hash-pinned actions/checkout@v3 to @v4](https://github.com/dependabot/dependabot-core/issues/8011).
     # - [Version comment in SHA-pinned github actions is not updated if it's incorrect](https://github.com/dependabot/dependabot-core/issues/7912)
-    - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.5.3
-    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 #v3.6.0
+    - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 #v3.5.3
+    - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 #v3.6.0
     # This is ok.
     - uses: GMZwinge/hello-world-composite-action/.github/actions/my-action@v1.0.8
     - uses: GMZwinge/hello-world-composite-action/.github/actions/my-action@v1.0.8
