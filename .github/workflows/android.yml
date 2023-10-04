@@ -29,6 +29,8 @@ jobs:
     #  v4    : 8ade135a41bc03ea155e62e844d188df1ea18608
     #  v4.0.0: 3df4ab11eba7bda6032a0b82a6bb43b11571feac
     # So it seems that the major version tags are moved to the latest patch version.
+    # TODO: should create a ticket for this, similar to https://github.com/dependabot/dependabot-core/pull/5891
+    # possibly titled something like: Change comment version precision of actions chosen by users.
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3
     - uses: GMZwinge/hello-world-composite-action/.github/actions/my-action@v1.0.8
