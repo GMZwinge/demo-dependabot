@@ -31,7 +31,13 @@ jobs:
     # So it seems that the major version tags are moved to the latest patch version.
     # TODO: should create a ticket for this, similar to https://github.com/dependabot/dependabot-core/pull/5891
     # possibly titled something like: Change comment version precision of actions chosen by users.
+    # In this case, Dependabot updates both the commit id and the version comment.
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
+    # In this case, Dependabot updates the commit id but not the version comment,
+    # even though the version comment also has that commit id.
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3
+    # What if the commit id and version comment don't match.
+    - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.5.3
+    - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 #v3.6.0
     - uses: GMZwinge/hello-world-composite-action/.github/actions/my-action@v1.0.8
     - uses: GMZwinge/hello-world-composite-action/.github/actions/my-action@v1.0.8
