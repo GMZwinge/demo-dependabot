@@ -41,6 +41,10 @@ jobs:
     # to 8ade135a41bc03ea155e62e844d188df1ea18608, but it does not update the version comment.
     # This is a problem: if the version tag is moved, the version comment will no longer be updated
     # until is is manually updated to match the latest patch version for the commit id.
+    # It looks like this is a known issue. Searching open issues for [action comment version ](https://github.com/dependabot/dependabot-core/issues?q=is%3Aissue+is%3Aopen+action+comment+version+),
+    # found:
+    # - [Dependabot doesn't always update version comments for hash-pinned actions/checkout@v3 to @v4](https://github.com/dependabot/dependabot-core/issues/8011).
+    # - [Version comment in SHA-pinned github actions is not updated if it's incorrect](https://github.com/dependabot/dependabot-core/issues/7912)
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.5.3
     - uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 #v3.6.0
     # This is ok.
