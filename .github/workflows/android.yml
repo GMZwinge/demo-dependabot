@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # According to [Never change version precision of actions chosen by users](https://github.com/dependabot/dependabot-core/pull/5891),
+    # dependabot should not change the version precision. Does it also apply to the version comment
+    # when using a commit id instead?
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3.6.0
     - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 #v3
     - uses: GMZwinge/hello-world-composite-action/.github/actions/my-action@v1.0.8
